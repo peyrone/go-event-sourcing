@@ -101,7 +101,6 @@ curl -s "localhost:8080/orders/summary?id=o-1001" | jq
 
 ## Inspect Stored Events
 
-```bash
 sqlite3 events.db 'SELECT aggregate_id, version, name, datetime(occurred_at, "unixepoch") FROM events ORDER BY id;'
 ```
 
